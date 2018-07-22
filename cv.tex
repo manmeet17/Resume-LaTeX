@@ -1,0 +1,142 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{multicol}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Manmeet \textsc{Tarun}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & 6-1-101/18, Padmaraonagar, Hyderabad \\
+    \textsc{Phone:}     & +91 8106224906\\
+    \textsc{email:}     & \href{mailto:meetutarun16@gmail.com}{meetutarun16@gmail.com} \\
+    \textsc{LinkedIn:} & \hyperlink{linkedin.com/in/manmeet12}{linkedin.com/in/manmeet12} \\
+    \textsc{Github:} & \hyperlink{github.com/manmeet17}{github.com/manmeet17}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \textsc{May-July 2018} & Business Technology Analyst Intern at \textsc{Deloitte}, Hyderabad \\&\emph{Deloitte Digital}\\&\footnotesize{Pushed code for some of the biggest Fortune 500 companies from the first day itself. Shipped an application which was launched across the world internally and scaled to thousands of users. Made a tool for talent POC's and interviewers which automates talent hiring process in campus placements. Used some of the latest technologies including Salesforce, Node.js, Angular 2. Got exposed to Agile methodologies and Scrum principles.}\\\multicolumn{2}{c}{} \\
+\textsc{Feb-Mar 2018} & Software Development Intern at \textsc{Vicara Tech}, \emph{Full Stack Development}\\&\footnotesize{Vicara is a Human Augmentation startup which works on a wearable gesture based interaction device. Developed a content sharing website made using React and Node.}\\\multicolumn{2}{c}{} \\
+\textsc{Aug 2017 - } & Microsoft Student Partner at \textsc{Microsoft}\\&\footnotesize{As a Microsoft Student Partner, I work on projects related to Microsoft technologies, conduct workshops, seminars and hackathons. Was invited to attend Microsoft Summit at BITS Pilani.}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+\textsc{July} 2015-2019 & B.Tech in \textsc{Computer Science}, \textbf{Vellore Institute of Technology}, Vellore\\ \\
+\textsc{June} 2013-2015 & Intermediate in \textsc{Science}, \normalsize\textbf{FIITJEE Junior College}, Hyderabad\\
+&\normalsize \textsc{IPE}: 90\% \\
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Achievements}
+\begin{flushleft}
+\textbf{Codeathon} -  Finished 5th out of 100 other coders. \\
+\textbf{ACM Codart' 17} - Finished in top 10 out of 200 other coders. \\
+\textbf{MSP} - Got selected by Microsoft as one amongst the 7 MSP's in my college. \\
+\textbf{Predict the Criminal} - HackerEarth Machine Learning Challenge - Finished Top 2 percentile in the world. \\
+\end{flushleft}
+
+%Section: Languages
+\section{Skills}
+\begin{multicols}{2}
+\begin{itemize}
+    \item Programming Languages - Python, C, C++, JavaScript
+    \item Database - SQL, NoSQL(MongoDB)
+    \item Frameworks/ Tools – Node.js, ReactJS, Tensorflow, Keras, Scikit-learn
+    \item Machine Learning, Deep Learning, NLP, Data Analytics
+    \item Operating System – Linux(Ubuntu), Windows
+    \item Version Control – Git, BitBucket
+\end{itemize}
+\end{multicols}
+
+\section{Projects}
+\begin{flushleft}
+\textbf{Stock Market Analysis} \\
+A Machine Learning model which predicts whether to buy, sell or hold the stocks for the S\&P 500 Companies based on the percentage change for the Adjusted Closing price of all the companies. \\ 
+Technology – Python( sklearn, matplotlib, pandas, etc.) \\
+Link - github.com/manmeet17/Stock-Market-Analysis \bigskip
+
+\textbf{Abandoned Luggage Detection} \\
+An ongoing project, which detects luggage which has been abandoned in semi-crowded areas. Convolution Neural Networks applied on the video stream which is analysed using OpenCV2. An alarm sets off 30 seconds after any kind of luggage is abandoned.
+Technology – Python (Tensorflow, OpenCV2, etc.) \bigskip
+
+\textbf{Reinforcement Learning for High Frequency Trading} \\
+Leveraging high-frequency financial data to perform algorithmic trading using Machine Learning. Writing a research paper on the same. \medskip
+
+\textbf{Save The Blood} \\ 
+Developed a game using CreateJS, which provides high level API's for manipulating canvas element. Leveraged Sockets.io for client-server communication. The game was scaled upto tens of thousands on users across the world. \bigskip
+
+\textbf{MediConnect} \\
+A web app made for doctors in rural areas, where they can connect patients to 
+hospitals in developed cities with better diagnostic equipments and treatments. Used Node.js, Handlebars, Google Maps API and much more. \bigskip
+
+\textbf{Sentiment Analysis of Tweets} \\
+Sentiment Analysis of lastest tweets fetched using the Twitter API. For now the project only predicts the sentiment as positive, negative or neutral \\
+Technology – Python ( nltk, tweepy) \bigskip
+
+\textbf{Competitive Programming} \\
+Solved over 300+ problems on platforms like Codechef, Hackerrank, LeetCode and more.
+\bigskip
+
+\textbf{Kaggle} \\
+Actively participate in Data Science challenges on Kaggle and HackerEarth for all kinds of real world problems which can be solved using data. 
+\end{flushleft}
+
+\end{document}
